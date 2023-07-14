@@ -205,6 +205,11 @@ fn render_files_test(desc: &FilesTestDesc, rendered: &mut Vec<TestDescAndFn>) {
                     compile_fail: false,
                     #[cfg(feature = "rustc_test_Ignore_messages")]
                     ignore_message: None,
+                    source_file: "",
+                    start_line: 0,
+                    start_col: 0,
+                    end_line: 0,
+                    end_col: 0,
                 },
                 testfn,
             };
@@ -256,6 +261,11 @@ fn render_data_test(desc: &DataTestDesc, rendered: &mut Vec<TestDescAndFn>) {
                 no_run: false,
                 #[cfg(feature = "rustc_test_Ignore_messages")]
                 ignore_message: None,
+                source_file: "",
+                start_line: 0,
+                start_col: 0,
+                end_line: 0,
+                end_col: 0,
             },
             testfn,
         };
@@ -449,6 +459,11 @@ fn render_test_descriptor(
                     no_run: false,
                     #[cfg(feature = "rustc_test_Ignore_messages")]
                     ignore_message: None,
+                    source_file: "",
+                    start_line: 0,
+                    start_col: 0,
+                    end_line: 0,
+                    end_col: 0,
                 },
                 testfn: TestFn::StaticTestFn(desc.testfn),
             })
